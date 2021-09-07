@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRecordsTable extends Migration
+class CreateMonthlyBudgetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateRecordsTable extends Migration
      */
     public function up()
     {
-        Schema::create('records', function (Blueprint $table) {
+        Schema::create('monthly_budgets', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('category_id')->nullable()->constrained()->onDelete('set null');
+            $table->integer('month')->unsigned();
+            $table->foreignId('category_id')->constrained()->onDelete('cascade');
             $table->bigInteger('price')->unsigned();
-            $table->date('date');
-            $table->text('detail')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateRecordsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('records');
+        Schema::dropIfExists('monthly_budgets');
     }
 }

@@ -1,0 +1,23 @@
+/**
+ * color
+ */
+/**
+ * breakpoint
+ */
+/**
+ * mixin
+ */
+body {
+  background-color: white;
+  font-family: "Yu Gothic", "YuGothic", sans-serif;
+  position: relative;
+}
+
+.nav {
+  background-color: #c8e2e5;
+  color: #c2607e;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100px;
+}

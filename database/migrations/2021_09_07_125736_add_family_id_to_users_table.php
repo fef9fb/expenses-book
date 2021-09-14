@@ -26,6 +26,7 @@ class AddFamilyIdToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
+            $table->dropForeign('users_family_id_foreign');
             $table->dropColumn('family_id');
         });
     }

@@ -1,1 +1,41 @@
-@use "../foundation/settings";
+@use "../foundation/settings" as set;
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+.nav {
+    background-color: set.$main_color;
+    color: set.$accent_color;
+    position: absolute;
+    width: 100%;
+    top: 0;
+
+    &__inner-wrapper {
+        display: flex;
+        padding: 15px 0;
+        justify-content: space-between;
+        align-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1200px;
+    }
+
+    &__logo {
+        a {
+            display: block;
+            color: set.$accent_color;
+            font-family: 'Varela Round', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        div {
+            padding: 0 10px;
+        }
+    }
+}

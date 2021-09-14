@@ -1,0 +1,11 @@
+@use "settings" as set;
+
+body {
+    background-color: set.$background;
+    font-family: 'Yu Gothic', 'YuGothic', sans-serif;
+    color: set.$text_color;
+}
+
+a {
+    color: set.$text_color;
+}

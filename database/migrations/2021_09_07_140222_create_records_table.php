@@ -19,6 +19,7 @@ class CreateRecordsTable extends Migration
             $table->bigInteger('price')->unsigned();
             $table->date('date');
             $table->text('detail')->nullable();
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('set null');
             $table->timestamps();
         });
     }

@@ -1,3 +1,8 @@
 @charset "UTF-8";
 
 @use 'foundation/settings' as set;
+@use 'foundation/normalize';
+@use 'foundation/base';
+@use 'foundation/layouts';
+
+@use 'components/nav';

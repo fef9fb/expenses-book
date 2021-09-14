@@ -14,7 +14,7 @@ class AddFamilyIdToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->foreignId('family_id')->constrained()->onDelete('cascade');
+            $table->foreignId('family_id')->nullable()->constrained()->onDelete('cascade');
         });
     }
 

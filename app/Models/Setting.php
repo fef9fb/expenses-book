@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Setting extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['start_date'];
+
+    public function family()
+    {
+        return $this->belongsTo(Family::class);
+    }
 }

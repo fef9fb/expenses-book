@@ -9,3 +9,10 @@
     margin-right: auto;
     margin-left: auto;
 }
+
+.col-2 {
+    display: flex;
+    > div {
+        width: 50%;
+    }
+}

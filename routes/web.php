@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RecordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 })->name('home');
+
+Route::middleware(['auth'])->group(function () {
+    Route::resource('record', RecordController::class);
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

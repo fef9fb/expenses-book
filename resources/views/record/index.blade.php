@@ -8,8 +8,8 @@
     </x-slot>
 
     <div class="container">
-        <div class="col-2">
-            <div class="inner-wrapper">
+        <div class="flex">
+            <div class="col-2 inner-wrapper">
                 <h3>実績</h3>
                 <table class="table">
                     <thead>
@@ -31,7 +31,7 @@
                     record index
                 </table>
             </div>
-            <div class="inner-wrapper">
+            <div class="col-2 inner-wrapper">
                 <h3>入力</h3>
                 <form method="post" action="">
                     @csrf

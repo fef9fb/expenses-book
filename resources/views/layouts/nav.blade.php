@@ -12,7 +12,7 @@
             @if (Route::has('login'))
                 @auth
                     <div class="nav__menu--item">
-                        <a href="#">
+                        <a href="{{ route('record.index') }}">
                             入力
                         </a>
                     </div>
@@ -22,7 +22,7 @@
                         </a>
                     </div>
                     <div class="nav__menu--item">
-                        <a href="#">
+                        <a href="{{ route('setting.index') }}">
                             設定
                         </a>
                     </div>

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Record;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RecordController extends Controller
 {
@@ -34,7 +36,10 @@ class RecordController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $record = new Record();
+       $record->fill($request->all());
+       $record->user_id = Auth::user()->id;
+        return redirect()->route('record.index');
     }
 
     /**

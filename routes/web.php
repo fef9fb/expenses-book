@@ -19,7 +19,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::middleware(['auth'])->group(function () {
-    Route::resource('record', RecordController::class);
+    Route::resource('record', RecordController::class)->except('create');
 });
 
 Route::get('/dashboard', function () {

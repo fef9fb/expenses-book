@@ -1,16 +1,17 @@
 <x-main-layout>
     <x-slot name="header">
         <div class="container">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Dashboard') }}
+            <h2>
+                入力
             </h2>
         </div>
     </x-slot>
 
     <div class="container">
         <div class="col-2">
-            <div>
-                <table>
+            <div class="inner-wrapper">
+                <h3>実績</h3>
+                <table class="table">
                     <thead>
                     <tr>
                         <td>項目名</td>
@@ -27,11 +28,40 @@
                         <td></td>
                     </tr>
                     </tbody>
-                        record index
+                    record index
                 </table>
             </div>
-            <div>
-                <form action="">
+            <div class="inner-wrapper">
+                <h3>入力</h3>
+                <form method="post" action="">
+                    @csrf
+                    <div class="form__controller">
+                        <label for="date">日付
+                            <input type="text" name="date" id="price">
+                        </label>
+                    </div>
+
+                    <div class="form__controller">
+                        <label for="price">金額
+                            <input type="text" name="price" id="price">
+                        </label>
+                    </div>
+
+                    <div class="form__controller--checkbox">
+                        <label class="form__radio">
+                            <input type="radio" name="category_id">
+                            <span>Category</span>
+                        </label>
+                    </div>
+
+                    <div class="form__controller">
+                        <label>
+                            メモ
+                            <textarea name="detail" id="" cols="30" rows="10"></textarea>
+                        </label>
+
+                    </div>
+
                     <button>
                         保存
                     </button>

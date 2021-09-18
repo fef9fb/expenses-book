@@ -6,6 +6,24 @@ body {
     color: set.$text_color;
 }
 
+/**********************************
+ Link
+ **********************************/
+
 a {
     color: set.$text_color;
+}
+
+/**********************************
+ Table
+ **********************************/
+
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.table, tr, td {
+    border: 1px solid set.$border_color;
 }

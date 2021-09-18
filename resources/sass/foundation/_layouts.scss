@@ -10,6 +10,14 @@
     margin-left: auto;
 }
 
+.inner-wrapper {
+    padding: 8px;
+}
+
+/**********************************
+ column
+ **********************************/
+
 .col-2 {
     display: flex;
     > div {

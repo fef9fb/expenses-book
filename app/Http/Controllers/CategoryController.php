@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class SettingController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +15,9 @@ class SettingController extends Controller
      */
     public function index()
     {
-        return view('setting.index');
+        return view('category.index');
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -24,7 +27,11 @@ class SettingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $category = new Category();
+        $category->fill($request->all());
+        $category->family_id = Auth::user()->family->id;
+        $category->save();
+        return redirect()->route('categories.index');
     }
 
     /**

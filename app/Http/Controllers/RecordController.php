@@ -18,15 +18,6 @@ class RecordController extends Controller
         return view('record.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -39,7 +30,7 @@ class RecordController extends Controller
        $record = new Record();
        $record->fill($request->all());
        $record->user_id = Auth::user()->id;
-        return redirect()->route('record.index');
+        return redirect()->route('records.index');
     }
 
     /**

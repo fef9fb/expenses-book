@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RecordController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +21,9 @@ Route::get('/', function () {
 })->name('home');
 
 Route::middleware(['auth'])->group(function () {
-    Route::resource('record', RecordController::class)->except('create');
-    Route::resource('setting', SettingController::class);
+    Route::resource('records', RecordController::class)->except('create');
+    Route::resource('settings', SettingController::class)->except('create');
+    Route::resource('categories', CategoryController::class)->except('create');
 });
 
 Route::get('/dashboard', function () {

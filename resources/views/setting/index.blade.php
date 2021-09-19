@@ -9,23 +9,8 @@
 
     <div class="container">
         <div class="flex">
-            <div class="col-side">
-                <div class="col-side__block">
-                    <ul>
-                        <li>
-                            <a href="{{ route('setting.index') }}">基本設定</a>
-                        </li>
-                        <li>
-                            <a href="#">カテゴリー設定</a>
-                        </li>
-                        <li>
-                            <a href="#">予算設定</a>
-                        </li>
-                        <li>
-                            <a href="#">固定費</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="col-side inner-wrapper">
+               @include('layouts.setting_side')
             </div>
             <div class="col-main inner-wrapper">
                 <form action="">

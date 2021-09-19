@@ -35,6 +35,27 @@
                         保存
                     </button>
                 </form>
+
+                <div>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>カテゴリー名</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($categories as $category)
+                        <tr>
+                            <th>{{ $category->name }}</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

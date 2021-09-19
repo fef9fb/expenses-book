@@ -15,7 +15,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('category.index');
+        $family = Auth::user()->family;
+        $categories = Category::where('family_id', $family->id)->get();
+        return view('category.index', compact('categories'));
     }
 
 

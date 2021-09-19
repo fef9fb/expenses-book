@@ -1,4 +1,7 @@
 <x-main-layout>
+    <x-slot name="style">
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    </x-slot>
     <x-slot name="header">
         <div class="container">
 

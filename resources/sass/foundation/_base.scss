@@ -24,6 +24,8 @@ a {
  **********************************/
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -34,9 +36,27 @@ ul {
 .table {
     border-collapse: collapse;
     border-spacing: 0;
+    text-align: left;
     width: 100%;
+
+    thead {
+        background-color: rgba(set.$main_color, .3);
+
+        & > tr {
+            border-bottom: 2px solid rgba(set.$border_color, .3);
+        }
+    }
+
+    tbody > tr {
+        border-bottom: 1px solid rgba(set.$border_color, .3);
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    th, td {
+        padding: 8px 10px;
+    }
 }
 
-.table, tr, td {
-    border: 1px solid set.$border_color;
-}

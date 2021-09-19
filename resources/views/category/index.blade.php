@@ -17,27 +17,29 @@
             </div>
             <div class="col-main inner-wrapper">
                 <h3>カテゴリー設定</h3>
-                <form method="post" action="{{ route('categories.store') }}">
-                    @csrf
-                    <label for="">
-                        カテゴリー名
-                        <input type="text" name="name">
-                    </label>
-                    <div>
-                        <label>
-                            <input type="radio" name="is_expenditure" value="1">
-                            <span>支出</span>
+                <div class="mb-s">
+                    <form method="post" action="{{ route('categories.store') }}">
+                        @csrf
+                        <label for="">
+                            カテゴリー名
+                            <input type="text" name="name">
                         </label>
-                        <label>
-                            <input type="radio" name="is_expenditure" value="0">
-                            <span>収入</span>
-                        </label>
-                    </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="is_expenditure" value="1">
+                                <span>支出</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="is_expenditure" value="0">
+                                <span>収入</span>
+                            </label>
+                        </div>
 
-                    <button>
-                        保存
-                    </button>
-                </form>
+                        <button>
+                            保存
+                        </button>
+                    </form>
+                </div>
 
                 <div>
                     <table class="table">
@@ -50,11 +52,11 @@
                         </thead>
                         <tbody>
                         @foreach($categories as $category)
-                        <tr>
-                            <th>{{ $category->name }}</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
+                            <tr>
+                                <td>{{ $category->name }}</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
                         @endforeach
                         </tbody>
                     </table>
